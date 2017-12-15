@@ -14,8 +14,8 @@ class Markdown {
 
    function __construct($db, $processor_classes) {
         $this->db = $db;
-        $this->tbl_markdown = "`".TABLE_PREFIX."mod_shyzik93_markdown`";
-        $this->module_name = "wb_markdown";
+        $this->tbl_markdown = "`".TABLE_PREFIX."mod_wbs_markdown`";
+        $this->module_name = "wbs_markdown";
         $this->module_dir = "/modules/{$this->module_name}";
         
         foreach ($processor_classes as $name => $value) {
