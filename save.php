@@ -29,7 +29,7 @@ $action = isset($_POST['action']) ? $_POST['action'] : $_GET['action'];
 if ($action == 'settings') {
     $processor = $_POST['processor'];
     $text = $_POST['text'];
-    $is_active = $_POST['is_active'] == 'on' ? 1 : 0;
+    $is_active = isset($_POST['is_active']) && $_POST['is_active'] == 'on' ? 1 : 0;
 
     $r = $clsMarkdown->update($section_id, $processor, $text, $is_active);
     if ($r !== true) $admin->print_error($errs, $ret_url);
